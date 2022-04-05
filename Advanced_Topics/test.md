@@ -1,2 +1,3 @@
 - An overview of some operations and functions that are crucial for intermediate and advanced sql analysts/devs
 - Sample code and explanation provided
+- Understanding and correctly using these functions greatly enhances one's efficiency in their work
