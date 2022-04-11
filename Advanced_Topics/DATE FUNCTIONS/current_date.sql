@@ -1,5 +1,5 @@
 /* Returns the current date */
-select CURRDATE();
+select CURDATE();
 
 /*Sample output*/
  -> '2008-06-13'
