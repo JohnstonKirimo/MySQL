@@ -18,8 +18,8 @@ Return the result table in any order.
 */
 
 --sample solution:
-DELETE p1 FROM Person p1,
-    Person p2
-WHERE
-    p1.Email = p2.Email AND p1.Id > p2.Id
+DELETE a
+FROM Person a, Person b
+WHERE a.id > b.id
+AND a.email = b.email
     
