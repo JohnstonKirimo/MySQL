@@ -27,12 +27,14 @@ FROM   num
 GROUP  BY log_id - row_num
 
 -- alternative solution:
-WITH num
-     AS (SELECT log_id,
-                Row_number() OVER (ORDER BY log_id) row_num
-         FROM   logs)
-SELECT Min(log_id) start_id,
-       Max(log_id) end_id
-FROM   num
-GROUP  BY log_id - row_num
+with cte
+as
+(
+    select log_id, log_id - row_number() over(order by log_id) Grp
+    from Logs
+)
+
+select min(log_id) start_id, max(log_id) end_id
+from cte
+group by Grp
 
